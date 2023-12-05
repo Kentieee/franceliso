@@ -1,0 +1,649 @@
+@font-face {
+    font-family: spacegrotesk-regular;
+    src: url(assets/fonts/space-grotesk-regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: prata;
+    src: url(assets/fonts/Prata-Regular.ttf) format("truetype");
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 300px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: spacegrotesk-regular;
+}
+
+body {
+    min-height: 100vh; 
+    align-items: center;
+    display:flex;
+    flex-flow: column;
+}
+/* ------------------------------------------------------------ */
+.nav {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4em;
+    background: #fff;
+    z-index: 999;
+}
+
+.nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    padding: 0 1em;
+    font-family: "spacegrotesk-regular";
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.logo {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: prata;
+    padding: 1em;
+    z-index: 1000;
+}
+/* ------------------------------------------------------------- */
+.intro-wrapper {
+    position: absolute; 
+    left: 170px;
+    top: 140px;
+}
+
+.intro-wrapper .first-text {
+    font-size: 35px;
+    color: black;
+    position:relative;
+}
+
+.intro-wrapper .sec-text {
+    height: 80px;
+    line-height: 80px;
+    overflow: hidden;
+}
+
+
+.sec-text li {
+    position: relative;
+    top: 0;
+    font-size: 60px;
+    color: white;
+    background-color:black;
+    list-style: none;
+    padding: 0 20px;
+    animation: slide 16s steps(4) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -320px;
+    }
+}
+
+.sec-text li span {
+    position: relative;
+}
+
+.sec-text li span::before {
+    content: '';
+    position: absolute;
+    width: 860px;
+    left: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 80px;
+    background: black;
+    border-left: 2px solid white;
+    animation: typing 2s steps(25) infinite
+    alternate;
+}
+
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color:black;
+    border: 1px solid black;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover{
+    border: 1px solid black;
+    background: black;
+    color: white;
+    transition: 1s;
+}
+
+#explore {
+    margin-top: 30px;
+}
+
+.intro{
+    margin: 150px auto;
+}
+
+.elevator {
+    position: absolute;
+    left: 170px;
+    top: 300px;
+    width: 500px;
+    text-align:left;
+}
+
+.home-picture img{
+    position: absolute;
+    top: 110px;
+    right: 110px;
+    width: 400px;
+}
+
+/* --------------------------------------------------------------- */
+
+.illustration1{
+    position: absolute;
+    top: 200px;
+    width: 100%;
+}
+
+.illustration2{
+    position: absolute;
+    top: 550px;
+    width: 100%;
+}
+
+.illustration3{
+    position: absolute;
+    top: 1000px;
+    width: 100%;
+}
+
+.illustration4{
+    position: absolute;
+    top: 1450px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+
+.title-container {
+    display: inline-block;
+}
+
+.illustration1 #t1{
+    width: 320px;
+}
+
+.illustration2 #t2{
+    width: 190px;
+}
+
+.illustration3 #t3{
+    width: 270px;
+}
+
+.illustration4 #t4{
+    width: 480px;
+}
+
+.title{
+    position: absolute;
+    left: 170px;
+    color: black;
+    font-family: spacegrotesk-regular;
+    font-size: 30px;
+    white-space: nowrap;
+    border-right: 3px solid;
+    /* width: 320px; */
+    overflow: hidden;
+    animation: 
+        ztyping 1s steps(21),
+        zcursor .4s step-end infinite alternate;
+}
+
+@keyframes zcursor{
+    50% {border-color: transparent;}
+}
+
+@keyframes ztyping{
+    from {width: 0;}
+}
+
+.caption{
+    position:absolute;
+    top: 70px;
+    left: 170px;
+    width: 400px;
+}
+
+.caption p {
+    position: absolute;
+    color: black;
+    font-family: spacegrotesk-regular;
+    font-size: 16px;
+}
+
+.image{
+    top:5;
+    position: absolute;
+    right: 100px;
+    display:flex;
+    flex-flow:row;
+    border-radius: 2px;
+}
+
+.image2{
+    top:-20px;
+    position: absolute;
+    right: 160px;
+    display:flex;
+    flex-flow:row;
+    border-radius: 2px;
+}
+
+.image3{
+    top:-20px;
+    position: absolute;
+    right: 120px;
+    display:flex;
+    flex-flow:row;
+    border-radius: 2px;
+}
+
+.image4{
+    top:-100px;
+    position: absolute;
+    right: 240px;
+    display:flex;
+    flex-flow:row;
+    border-radius: 2px;
+}
+
+.image img{
+    height: 250px;
+}
+
+.image2 img{
+    height: 350px;
+}
+
+.image3 img{
+    height: 300px;
+}
+
+.image4 img{
+    height: 450px;
+}
+
+
+
+.sidebar {
+    top: 100px;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 19.071em;
+    background: #fff;
+    z-index: 999;
+}
+
+.sidebar a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    padding: 0 1em;
+    font-family: "spacegrotesk-regular";
+    font-weight: 500;
+    font-size: 12px;
+}
+
+/* ----------------------------------------- */
+
+.frame-container {
+    top: 310px;
+    position: absolute;
+    width: 1200px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+}
+
+.frame{
+    position: relative;
+    background: white;
+    padding: 15px;
+    padding-bottom: 0;
+    margin: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0,0,.6  );
+}
+
+.frame .frame-image{
+    position:relative;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.frame .frame-image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.frame .frame-caption{
+    position:relative;
+    width: 100%;
+    text-align: center;
+    min-height: 20px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    transition: .3s ease;
+}
+
+.frame:hover{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+}
+
+.skill-intro{
+    top: 120px;
+    position:absolute;
+    width: 50%;
+    text-align: center;
+}
+
+.skill-title{
+    margin: 20px;
+    font-size: 16px;
+}
+
+.skill-caption{
+    font-size: 14px;
+}
+
+/* ---------------------------------------------------------- */
+
+.testimonials{
+    padding: 40px 0;
+    text-align: center;
+    top: 900px;
+    position: absolute;
+}
+
+.inner{
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.border{
+    width: 160px;
+    height: 5px;
+    margin: 26px auto;
+    background-color: black;
+}
+
+.row{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col {
+    flex: 33.33%;
+    max-width: 33.33%;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.testimonial{
+    background: #fff;
+    padding:30px;
+    margin-bottom:30px;
+    flex-direction: column;
+    display:flex;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0, 0,0,.6  );
+}
+
+.reviewer{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.stars{
+    margin-bottom: 20px;
+    display: flex;
+    width:15px;
+    margin-left: -70px;
+}
+.reviewer-name {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.services {
+    top: 250px;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: min(1600px,100%);
+}
+
+.pricing-card{
+    flex: 1;
+    max-width: 360px;
+    background-color: black;
+    margin: 20px 10px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    color: white;
+    transition: .3s linear;
+}
+
+.pricing-card-header{
+    background-color: gray;
+    display: inline-block;
+    color: black;
+    padding: 12px 30px;
+    border-radius: 0 0 20px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: .4s linear;
+}
+
+.pricing-card:hover .pricing-card-header{
+    box-shadow:  0 0 0 26em gray;
+}
+
+.price {
+    font-size: 70px;
+    color: gray;
+    margin: 40px 0;
+    transition: .2s linear;
+}
+
+.price sup, .price span{
+    font-size: 22px;
+    font-weight: 700;   
+}
+
+.pricing-card:hover ,.pricing-card:hover .price{
+    color:black;
+}
+
+.pricing-card li{
+    font-size: 13px;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+.order-button{
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    margin-bottom: 40px;
+    margin-top: 80px;
+    border: 2px solid gray;
+    color: gray;
+    padding: 18px 40px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: .3s linear;
+}
+
+.order-button:hover{
+    background-color: gray;
+    color:black;
+}
+
+/* -------------------------------------------------------- */
+
+.program1{
+    position: absolute;
+    top: 200px;
+    width: 100%;
+}
+
+.program2{
+    position: absolute;
+    top: 550px;
+    width: 100%;
+}
+
+.program3{
+    position: absolute;
+    top: 950px;
+    width: 100%;
+}
+
+.title-container {
+    display: inline-block;
+}
+
+.program1 #p1{
+    width: 410px;
+}
+
+.program2 #p2{
+    width: 370px;
+}
+
+.program3 #p3{
+    width: 160px;
+}
+
+.program-title{
+    position: absolute;
+    left: 170px;
+    color: black;
+    font-family: spacegrotesk-regular;
+    font-size: 30px;
+    white-space: nowrap;
+    border-right: 3px solid;
+    /* width: 320px; */
+    overflow: hidden;
+    animation: 
+        ztyping 1s steps(21),
+        zcursor .4s step-end infinite alternate;
+}
+
+.picture1 img{
+    height: 250px;
+}
+
+.picture2 img{
+    height: 350px;
+}
+
+.picture3 img{
+    height: 300px;
+}
+
+
+.picture1{
+    top:5;
+    position: absolute;
+    right: 100px;
+    display:flex;
+    flex-flow:row;
+    border-radius: 2px;
+}
+
+.picture2{
+    top:-20px;
+    position: absolute;
+    right: 100px;
+    display:flex;
+    flex-flow:row;
+    border-radius: 2px;
+}
+
+.picture3{
+    top:-20px;
+    position: absolute;
+    right: 70px;
+    display:flex;
+    flex-flow:row;
+    border-radius: 2px;
+}
+
+.desc{
+    position:absolute;
+    top: 70px;
+    left: 170px;
+    width: 400px;
+}
+
+.desc p{
+    position: absolute;
+    color: black;
+    font-family: spacegrotesk-regular;
+    font-size: 16px;
+}
